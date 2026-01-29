@@ -25,10 +25,10 @@ jobs:
           # This token is required only if you have configured to store the signatures in a remote repository/organization
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         with:
-          remote-repository-name: 'https://github.com/ManuelKugelmann/CLA-Test/blob/CLA/' 
+          remote-repository-name: 'https://github.com/ManuelKugelmann/CLA-Test/' 
           path-to-signatures: 'CLA/CLA_v1.0_Signatures.json'
           path-to-document: 'https://github.com/ManuelKugelmann/CLA-Test/blob/CLA/CLA/CLA.md'  #'https://github.com/cla-assistant/github-action/blob/master/SAPCLA.md' # e.g. a CLA or a DCO document
-          branch: 'main'
+          branch: 'CLA'
           allowlist: bot*
 
           # the followings are the optional inputs - If the optional inputs are not given, then default values will be taken
@@ -42,4 +42,5 @@ jobs:
           #lock-pullrequest-aftermerge: false - if you don't want this bot to automatically lock the pull request after merging (default - true)
 
           #use-dco-flag: true - If you are using DCO instead of CLA
+
 
